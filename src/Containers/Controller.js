@@ -13,6 +13,14 @@ class Controller extends Component {
     render() {
         let bmiDisplay = null
         if (this.props.bmi) {
+            let bmiCategory = 'Normal'
+            if (this.props.bmi > 25) {
+                bmiCategory = 'Overweight'
+            }
+            if (this.props.bmi < 18.5) {
+                bmiCategory = 'Underweight'
+            }
+
             bmiDisplay = <Card>
                 <Card.Body>
                     <Card.Title>
@@ -20,6 +28,9 @@ class Controller extends Component {
                     </Card.Title>
                     <Card.Text>
                         {Math.round((this.props.bmi + Number.EPSILON) * 100) / 100}
+                    </Card.Text>
+                    <Card.Text>
+                        {'You are ' + bmiCategory}
                     </Card.Text>
                 </Card.Body>
             </Card>
