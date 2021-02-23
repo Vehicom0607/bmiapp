@@ -6,7 +6,7 @@ import classes from './Navbar.module.css'
 const TopNavbar = () => {
     return (
         <Navbar expand="lg" className={classes.Navbar}>
-            <Navbar.Brand href="#home">React Paper Scissors</Navbar.Brand>
+            <Navbar.Brand href="#home">B Am I?</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
